@@ -21,7 +21,7 @@ export default function LoginForm() {
 				<Button className="mt-8">
 					Sign In
 				</Button>
-				<Button className="bg-blue-400 border-blue-700  hover:bg-blue-600 hover:border-blue-900">
+				<Button className="bg-blue-500 border-blue-700  hover:bg-blue-700 hover:border-blue-900">
 					<BsGoogle className="text-2xl"/> 
 					<span>Google</span> 
 				</Button>
