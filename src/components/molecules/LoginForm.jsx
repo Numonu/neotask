@@ -6,7 +6,7 @@ import Input from "../atoms/Input";
 export default function LoginForm() {
 	return (
 		<>
-			<form>
+			<form className="flex flex-col gap-4">
 				<Input
 					placeholder="email address"
 					icon={<AiOutlineUser />}
@@ -17,7 +17,7 @@ export default function LoginForm() {
 					icon={<BsShieldLock />}
 					required
 				/>
-				<Button>
+				<Button className="mt-8">
 					Sign In
 				</Button>
 			</form>
