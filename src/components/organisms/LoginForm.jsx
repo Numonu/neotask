@@ -6,7 +6,7 @@ import Input from "../atoms/Input";
 export default function LoginForm() {
 	return (
 		<>
-			<div>
+			<form>
 				<Input
 					placeholder="email address"
 					icon={<AiOutlineUser />}
@@ -20,7 +20,7 @@ export default function LoginForm() {
 				<Button>
 					Sign In
 				</Button>
-			</div>
+			</form>
 		</>
 	);
 }
