@@ -8,8 +8,8 @@ export default function Input({icon , placeholder , required , type="text"}) {
 	return (
 		<>
 			<div
-				className={`${focus && "border-amber-500"} 
-                border-black border-2 rounded-lg p-2 flex items-center gap-2 transition-colors`}
+				className={`${focus ? "border-amber-500" : "border-black"} 
+                border-2 rounded-lg p-2 flex items-center gap-2 transition-colors`}
 				onFocus={on}
 				onBlur={off}
 			>
