@@ -1,7 +1,7 @@
-import Input from "../atoms/Input";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsShieldLock } from "react-icons/bs";
 import Button from "../atoms/Button";
+import Input from "../atoms/Input";
 
 export default function LoginForm() {
 	return (
@@ -17,7 +17,9 @@ export default function LoginForm() {
 					icon={<BsShieldLock />}
 					required
 				/>
-                <Button></Button>
+				<Button>
+					Sign In
+				</Button>
 			</div>
 		</>
 	);
