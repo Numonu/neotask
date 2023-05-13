@@ -5,8 +5,8 @@ export default function Login(){
         <Head>
             <title>Login in Neotask</title>
         </Head>
-        <div>
-            
+        <div className="text-neutral-900 bg-neutral-50 min-h-screen">
+
         </div>
     </>
 }
