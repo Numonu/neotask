@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Input({icon , placeholder , required}) {
+export default function Input({icon , placeholder , required , type="text"}) {
 	const [focus, setFocus] = useState(false);
 
 	const on = () => setFocus(true);
@@ -21,7 +21,7 @@ export default function Input({icon , placeholder , required}) {
 				</div>
 				<input
 					className="text-xl grow outline-none"
-					type="text"
+                    type={type}
 					placeholder={placeholder}
 					required={required}
 				/>
