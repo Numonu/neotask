@@ -6,7 +6,7 @@ import LoginForm from "../molecules/LoginForm";
 export default function LoginLayout() {
 	return (
 		<>
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 px-4">
 				<Image
                     className="self-center"
 					src="/svg/login_draw.svg"
