@@ -15,6 +15,7 @@ export default function LoginForm() {
 				<Input
 					placeholder="password"
 					icon={<BsShieldLock />}
+					type="password"
 					required
 				/>
 				<Button className="mt-8">
