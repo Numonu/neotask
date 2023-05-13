@@ -16,12 +16,11 @@ export default function LoginLayout() {
 				/>
 				<Title>Login</Title>
 				<p className="text-xl">
-					Bienvenido! , inicia sesion y accede a todas tus tareas
-					desde cualquier parte del mundo
+                    log in and access your notes from anywhere in the world, even the moon!
 				</p>
 				<LoginForm />
 				<span className="text-center">
-					No tienes una cuenta?<MyLink>Crear aqui!</MyLink>
+                    Don&apos;t have an account? <MyLink>Sign up for free</MyLink>
 				</span>
 			</div>
 		</>
