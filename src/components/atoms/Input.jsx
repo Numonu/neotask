@@ -20,7 +20,7 @@ export default function Input({icon , placeholder , required , type="text"}) {
 					{icon}
 				</div>
 				<input
-					className="text-xl grow outline-none"
+					className="text-xl grow outline-none placeholder:capitalize"
                     type={type}
 					placeholder={placeholder}
 					required={required}
