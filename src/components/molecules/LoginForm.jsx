@@ -1,5 +1,6 @@
-import { AiOutlineUser } from "react-icons/ai";
-import { BsShieldLock , BsGoogle } from "react-icons/bs";
+import { AiOutlineUser , AiOutlineMail} from "react-icons/ai";
+import { BsShieldLock, BsGoogle } from "react-icons/bs";
+import { MdOutlineMail } from "react-icons/md";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 
@@ -19,11 +20,12 @@ export default function LoginForm() {
 					required
 				/>
 				<Button className="mt-8">
-					Sign In
+					<MdOutlineMail className="text-3xl" />
+					<span>Sign In with Email</span>
 				</Button>
-				<Button className="bg-blue-500 border-blue-700  hover:bg-blue-700 hover:border-blue-900">
-					<BsGoogle className="text-2xl"/> 
-					<span>Google</span> 
+				<Button>
+					<BsGoogle className="text-2xl" />
+					<span>Sign In with Google</span>
 				</Button>
 			</form>
 		</>
