@@ -5,7 +5,7 @@ import LoginForm from "../molecules/LoginForm";
 export default function LoginLayout() {
 	return (
 		<>
-			<div>
+			<div className="flex flex-col gap-4">
 				<Title>Login</Title>
 				<p className="text-xl">
 					Bienvenido! , inicia sesion y accede a todas tus tareas
