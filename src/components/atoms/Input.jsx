@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AiOutlineUser } from "react-icons/ai";
-export default function Input() {
+export default function Input({icon , placeholder , required}) {
 	const [focus, setFocus] = useState(false);
 
 	const on = () => setFocus(true);
@@ -18,13 +17,13 @@ export default function Input() {
 					className={`${focus && "text-amber-500"} 
                     text-3xl transition-colors`}
 				>
-					<AiOutlineUser />
+					{icon}
 				</div>
 				<input
 					className="text-xl grow outline-none"
 					type="text"
-					placeholder="Full Name"
-					required
+					placeholder={placeholder}
+					required={required}
 				/>
 			</div>
 		</>
