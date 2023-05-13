@@ -1,7 +1,6 @@
-import Input from "@/components/atoms/Input";
 import Title from "@/components/atoms/Title";
-import { AiOutlineUser , AiOutlineMail } from "react-icons/ai";
 import Head from "next/head";
+import LoginForm from "@/components/organisms/LoginForm";
 
 export default function Login() {
 	return (
@@ -11,17 +10,10 @@ export default function Login() {
 			</Head>
 			<div className="text-neutral-900 bg-neutral-50 min-h-screen">
 				<Title>Login</Title>
-				<Input
-					placeholder="Email Address"
-					icon={<AiOutlineUser />}
-					required
-				/>
-                <Input
-					placeholder="Password"
-                    type="password"
-					icon={<AiOutlineMail />}
-					required
-				/>
+				<p className="text-xl">
+					Bienvenido! , inicia sesion y accede a todas tus tareas desde cualquier parte del mundo
+				</p>
+				<LoginForm/>
 			</div>
 		</>
 	);
