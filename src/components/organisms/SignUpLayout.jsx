@@ -13,7 +13,7 @@ export default function SignUpLayout() {
 				</p>
 				<SignUpForm />
 				<span className="text-center">
-					Already have an account? <MyLink>Sign In</MyLink>
+					Already have an account? <MyLink href="/login">Sign In</MyLink>
 				</span>
 			</div>
 		</>
