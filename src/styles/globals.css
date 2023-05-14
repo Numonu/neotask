@@ -11,6 +11,11 @@ body{
   overflow-x: hidden;
 }
 
+.point-pattern{
+  background-image: radial-gradient(circle , transparent 50% , whitesmoke 70%) , radial-gradient(circle , rgba(163, 163, 163, 0.397) 20% , whitesmoke 20% );
+  background-size: auto , 1rem 1rem;
+}
+
 @media screen and (max-width : 360px) {
   html{
     font-size: 14px;
