@@ -17,7 +17,7 @@ export default function MyImage({ className, src, alt, fill, width, height }) {
 	}
 	return (
 		<>
-			<div className={`${className} relative`}>
+			<div className={`${className}`}>
 				<Image
 					src={src}
 					alt={alt}
