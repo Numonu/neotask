@@ -12,7 +12,7 @@ export default function LoginLayout() {
 				</p>
 				<LoginForm />
 				<span className="text-center">
-                    Don&apos;t have an account? <MyLink>Sign up for free</MyLink>
+                    Don&apos;t have an account? <MyLink href="/signup">Sign up for free</MyLink>
 				</span>
 			</div>
 		</>
