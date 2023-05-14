@@ -1,10 +1,11 @@
-import { GiParrotHead } from "react-icons/gi";
+import { BsFillTriangleFill } from "react-icons/bs";
 
 export default function Logo() {
 	return (
 		<>
-			<div className="bg-neutral-50 w-min mx-auto rounded-full p-4 text-6xl border-4 border-neutral-800">
-				<GiParrotHead />
+			<div className="relative w-min mx-auto rounded-full text-6xl">
+				<BsFillTriangleFill />
+				<BsFillTriangleFill className="text-zinc-700 absolute bottom-2 left-4"/>
 			</div>
 		</>
 	);
