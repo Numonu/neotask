@@ -9,7 +9,7 @@ export default function HomeHero() {
 	return (
 		<>
 			<div className="h-screen grid grid-rows-[1fr_min-content]   place-items-center text-center">
-				<div>
+				<div className="flex flex-col gap-4">
 					<Logo />
 					<Subtitle>with Neotask you can</Subtitle>
 					<Title>
