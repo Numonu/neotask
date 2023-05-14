@@ -28,15 +28,25 @@ export default function HomeHero() {
 						neotask is the perfect solution for writing, storing and
 						organizing your notes.Shall we get started?
 					</Paragraph>
-					<Button className="mt-4">
-						<BsFillRocketTakeoffFill />
-						let&apos;s go
-					</Button>
+					<div className="relative">
+						<Button className="mt-4">
+							<BsFillRocketTakeoffFill />
+							let&apos;s go
+						</Button>
+						<MyImage
+							className="absolute left-full translate-y-1 -translate-x-full w-16 h-9"
+							src="svg/circleArrow.svg"
+							alt="circle arrow illustration"
+							width={100}
+							height={100}
+						/>
+					</div>
 				</div>
 				<MyImage
 					className="h-20 w-full"
 					src="/svg/wave.svg"
 					alt="wave illustration"
+					fill
 				/>
 			</div>
 		</>
