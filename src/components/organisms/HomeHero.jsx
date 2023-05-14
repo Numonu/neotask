@@ -22,7 +22,19 @@ export default function HomeHero() {
 					<Logo />
 					<Subtitle>with Neotask you can</Subtitle>
 					<Title>
-						It&apos;s very easy to do whatever <br /> you want to do
+						It&apos;s very easy to do whatever <br />
+						you
+						<span className="relative inline-block px-3">
+							want
+							<MyImage
+								className="absolute h-8 w-20"
+								src="/svg/underline.svg"
+								alt="underline illustration"
+								width={100}
+								height={100}
+							/>
+						</span>
+						to do
 					</Title>
 					<Paragraph>
 						neotask is the perfect solution for writing, storing and
