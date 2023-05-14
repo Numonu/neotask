@@ -1,4 +1,4 @@
-import { AiOutlineUser , AiOutlineMail} from "react-icons/ai";
+import { MdAlternateEmail } from "react-icons/md";
 import { BsShieldLock, BsGoogle } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import Button from "../atoms/Button";
@@ -10,7 +10,7 @@ export default function LoginForm() {
 			<form className="flex flex-col gap-4">
 				<Input
 					placeholder="email address"
-					icon={<AiOutlineUser />}
+					icon={<MdAlternateEmail />}
 					required
 				/>
 				<Input
