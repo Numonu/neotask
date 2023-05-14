@@ -10,6 +10,13 @@ export default function HomeHero() {
 	return (
 		<>
 			<div className="h-screen grid grid-rows-[1fr_min-content]   place-items-center text-center">
+				<div className="absolute w-10 aspect-square left-0 top-0">
+					<Image
+						src="/svg/twoLines.svg"
+						alt="two lines illustration"
+						fill="layout"
+					/>
+				</div>
 				<div className="max-w-xl mx-auto px-4 flex flex-col gap-4">
 					<Logo />
 					<Subtitle>with Neotask you can</Subtitle>
@@ -30,7 +37,7 @@ export default function HomeHero() {
 						src="/svg/wave.svg"
 						alt="wave illustration"
 						layout="fill"
-                        objectFit="cover"
+						objectFit="cover"
 					/>
 				</div>
 			</div>
