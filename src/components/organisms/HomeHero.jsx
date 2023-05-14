@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import Button from "../atoms/Button";
 import Logo from "../atoms/Logo";
@@ -23,6 +24,14 @@ export default function HomeHero() {
 						<BsFillRocketTakeoffFill />
 						let&apos;s go
 					</Button>
+				</div>
+				<div className="relative h-20 w-full">
+					<Image
+						src="/svg/wave.svg"
+						alt="wave illustration"
+						layout="fill"
+                        objectFit="cover"
+					/>
 				</div>
 			</div>
 		</>
