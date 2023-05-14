@@ -11,13 +11,13 @@ export default function HomeHero() {
 	return (
 		<>
 			<div className="h-screen grid grid-rows-[1fr_min-content]   place-items-center text-center">
-				<div className="absolute w-10 aspect-square left-0 top-0">
-					<Image
-						src="/svg/twoLines.svg"
-						alt="two lines illustration"
-						fill="layout"
-					/>
-				</div>
+				<MyImage
+					className="absolute left-0 top-0 h-8 w-20"
+					src="/svg/twoLines.svg"
+					alt="double lines illustration"
+					width={60}
+					height={60}
+				/>
 				<div className="max-w-xl mx-auto px-4 flex flex-col gap-4">
 					<Logo />
 					<Subtitle>with Neotask you can</Subtitle>
@@ -36,7 +36,7 @@ export default function HomeHero() {
 						</span>
 						to do
 					</Title>
-					<Paragraph>
+					<Paragraph className="mt-4">
 						neotask is the perfect solution for writing, storing and
 						organizing your notes.Shall we get started?
 					</Paragraph>
@@ -46,7 +46,7 @@ export default function HomeHero() {
 							let&apos;s go
 						</Button>
 						<MyImage
-							className="absolute left-full translate-y-1 -translate-x-full w-16 h-9"
+							className="absolute right-0 translate-y-1 w-16 h-9"
 							src="svg/circleArrow.svg"
 							alt="circle arrow illustration"
 							width={100}
