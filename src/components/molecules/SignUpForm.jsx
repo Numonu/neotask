@@ -17,6 +17,7 @@ export default function SignUpForm() {
 				<Input
 					placeholder="email address"
 					icon={<MdAlternateEmail />}
+					type="email"
 					required
 				/>
 				<Input

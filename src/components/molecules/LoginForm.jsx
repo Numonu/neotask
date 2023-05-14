@@ -11,6 +11,7 @@ export default function LoginForm() {
 				<Input
 					placeholder="email address"
 					icon={<MdAlternateEmail />}
+					type="email"
 					required
 				/>
 				<Input
