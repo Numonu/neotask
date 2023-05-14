@@ -27,11 +27,11 @@ export default function SignUpForm() {
 				/>
 				<Button className="mt-8">
 					<MdOutlineMail className="text-3xl" />
-					<span>Create account with Email</span>
+					<span>Continue with Email</span>
 				</Button>
 				<Button>
 					<BsGoogle className="text-2xl" />
-					<span>Create account with Google</span>
+					<span>Continue with Google</span>
 				</Button>
 			</form>
 		</>
