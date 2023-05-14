@@ -1,4 +1,5 @@
 import MyLink from "../atoms/Link";
+import Paragraph from "../atoms/Paragraph";
 import Title from "../atoms/Title";
 import SignUpForm from "../molecules/SignUpForm";
 
@@ -7,13 +8,14 @@ export default function SignUpLayout() {
 		<>
 			<div className="flex flex-col gap-4 px-4">
 				<Title>Sign Up</Title>
-				<p className="text-xl">
+				<Paragraph>
 					Create an account and discover the wonderful benefits of a
 					task manager, fast, easy and beautiful
-				</p>
+				</Paragraph>
 				<SignUpForm />
 				<span className="text-center">
-					Already have an account? <MyLink href="/login">Sign In</MyLink>
+					Already have an account?{" "}
+					<MyLink href="/login">Sign In</MyLink>
 				</span>
 			</div>
 		</>
