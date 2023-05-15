@@ -3,18 +3,24 @@ import Search from "../atoms/Search";
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
 import { AiFillStar } from "react-icons/ai";
+import MyImage from "../atoms/MyImage";
 
 export default function DashboardHero() {
 	return (
 		<>
 			<div className="max-w-[1200px] mx-auto px-4 py-5 flex flex-col gap-2">
+				<MyImage 
+					src="svg/rocket.svg" 
+					width={60} 
+					height={60} 
+				/>
 				<Subtitle className="-mb-4">welcome</Subtitle>
 				<Title>Numonu</Title>
 				<Paragraph className="mb-4">
 					Did you know that you can customize this welcome message in
 					the settings section ?
 				</Paragraph>
-				<Search />
+				<Search />g
 			</div>
 		</>
 	);
