@@ -1,19 +1,19 @@
 import { AiOutlineFolderOpen } from "react-icons/ai";
-import FolderButton from "../atoms/FolderButton";
+import Folder from "../atoms/Folder";
 
 export default function DashboardFolders() {
 	return (
 		<>
 			<div className="flex flex-col gap-1">
-				<FolderButton icon={<AiOutlineFolderOpen />}>
+				<Folder icon={<AiOutlineFolderOpen />}>
                     All
-                </FolderButton>
-				<FolderButton icon={<AiOutlineFolderOpen />}>
+                </Folder>
+				<Folder icon={<AiOutlineFolderOpen />}>
 					General
-				</FolderButton>
-				<FolderButton icon={<AiOutlineFolderOpen />}>
+				</Folder>
+				<Folder icon={<AiOutlineFolderOpen />}>
 					Favorites
-				</FolderButton>
+				</Folder>
 			</div>
 		</>
 	);
