@@ -11,7 +11,7 @@ export default function Search() {
 				onFocus={() => setFocus(true)}
 				onBlur={() => setFocus(false)}
 			>
-				<input className="text-xl" type="text" />
+				<input className="text-xl" type="text" placeholder="Search"/>
 				<BsSearch className={`${focus && "text-amber-500"} text-2xl`} />
 			</div>
 		</>
