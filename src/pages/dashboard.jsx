@@ -1,5 +1,6 @@
 import Head from "next/head";
 import DashboardHead from "@/components/organisms/DashboardHead";
+import DashboardHero from "@/components/molecules/DashboardHero";
 
 export default function Dashboard() {
 	return (
@@ -9,6 +10,7 @@ export default function Dashboard() {
 			</Head>
 			<div className="bg-neutral-50 text-neutral-800 h-[200vh]">
 				<DashboardHead/>
+                <DashboardHero/>
 			</div>
 		</>
 	);
