@@ -12,7 +12,7 @@ export default function Home() {
 			<Head>
 				<title>Welcome to Neotask</title>
 			</Head>
-			<div className="point-pattern text-neutral-800 min-h-screen">
+			<div className="pattern-radial-points text-neutral-800 min-h-screen">
 				<HomeHero />
 			</div>
 		</>
