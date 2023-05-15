@@ -2,7 +2,6 @@ import Paragraph from "../atoms/Paragraph";
 import Search from "../atoms/Search";
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
-import { AiFillStar } from "react-icons/ai";
 import MyImage from "../atoms/MyImage";
 
 export default function DashboardHero() {
@@ -20,7 +19,7 @@ export default function DashboardHero() {
 					Did you know that you can customize this welcome message in
 					the settings section ?
 				</Paragraph>
-				<Search />g
+				<Search />
 			</div>
 		</>
 	);
