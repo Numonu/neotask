@@ -6,7 +6,7 @@ import SignUpForm from "../molecules/SignUpForm";
 export default function SignUpLayout() {
 	return (
 		<>
-			<div className="flex flex-col gap-4 px-4">
+			<div className="max-w-xl mx-auto flex flex-col gap-4 px-4">
 				<Title>Sign Up</Title>
 				<Paragraph>
 					Create an account and discover the wonderful benefits of a
