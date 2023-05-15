@@ -6,7 +6,7 @@ import LoginForm from "../molecules/LoginForm";
 export default function LoginLayout() {
 	return (
 		<>
-			<div className="flex flex-col gap-4 px-4">
+			<div className="max-w-xl mx-auto flex flex-col gap-4 px-4">
 				<Title>Login</Title>
 				<Paragraph>
 					Login and access your notes from anywhere in the world, even
