@@ -2,7 +2,6 @@ import Paragraph from "../atoms/Paragraph";
 import Search from "../atoms/Search";
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
-import MyImage from "../atoms/MyImage";
 
 export default function DashboardHero() {
 	return (
