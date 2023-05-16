@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import Button from "../atoms/Button";
 import Logo from "../atoms/Logo";
