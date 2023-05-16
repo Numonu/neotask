@@ -9,7 +9,7 @@ export default function DashboardHero() {
 		<>
 			<div className="max-w-[1200px] mx-auto px-4 py-5 flex flex-col gap-2">
 				<MyImage 
-					src="svg/rocket.svg" 
+					src="svg/person.svg" 
 					width={60} 
 					height={60} 
 				/>
