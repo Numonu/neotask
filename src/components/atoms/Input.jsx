@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 export default function Input({icon , placeholder , required , type="text"}) {
 	const [focus, setFocus] = useState(false);
