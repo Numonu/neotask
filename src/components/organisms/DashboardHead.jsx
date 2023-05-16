@@ -1,3 +1,4 @@
+"use client"
 import useScrollView from "@/hooks/useScrollView";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { IoMdNotificationsOutline } from "react-icons/io";
