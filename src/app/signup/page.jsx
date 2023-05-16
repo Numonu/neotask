@@ -1,7 +1,8 @@
 import SignUpLayout from "../../components/organisms/SignUpLayout";
 
-export const medatada = {
-    title: 'Sign up in Neotask',
+
+export const metadata = {
+	title: 'Sign up in Neotask',
 	description: 'Create an account and discover the wonderful benefits of a task manager, fast, easy and beautiful',
 }
 
