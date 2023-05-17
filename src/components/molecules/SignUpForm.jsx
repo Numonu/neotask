@@ -30,17 +30,20 @@ export default function SignUpForm() {
 		<>
 			<form className="flex flex-col gap-4">
 				<Input
+					onChange={(e) => setCredentials({...credentials , username : e})}
 					placeholder="user name"
 					icon={<AiOutlineUser />}
 					required
 				/>
 				<Input
+					onChange={(e) => setCredentials({...credentials , email : e})}
 					placeholder="email address"
 					icon={<MdAlternateEmail />}
 					type="email"
 					required
 				/>
 				<Input
+					onChange={(e) => setCredentials({...credentials , password : e})}
 					placeholder="password"
 					icon={<BsShieldLock />}
 					type="password"
