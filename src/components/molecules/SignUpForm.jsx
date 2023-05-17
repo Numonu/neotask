@@ -8,6 +8,7 @@ import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import { auth } from "@/libs/firebase.init";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function SignUpForm() {
 
@@ -19,12 +20,13 @@ export default function SignUpForm() {
 
 
 	const registerWithEmail = async () => {
+		const loader = toast.loading("Sending");
 		try {
 			await createUserWithEmailAndPassword(auth , credentials.email , credentials.password);
-			alert("registro exitoso");
+			toast.dismiss(loader);
 		} catch (error) {
 			console.error(error.code , error.message);
-			alert("registro fallido");
+			toast.error(error.message , {id: loader});
 		}
 	}
 
