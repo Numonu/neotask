@@ -21,14 +21,19 @@ export default function SignUpForm() {
 	const registerWithEmail = async () => {
 		try {
 			await createUserWithEmailAndPassword(auth , credentials.email , credentials.password);
+			alert("registro exitoso");
 		} catch (error) {
 			console.error(error.code , error.message);
+			alert("registro fallido");
 		}
 	}
 
 	return (
 		<>
-			<form className="flex flex-col gap-4">
+			<form className="flex flex-col gap-4" onSubmit={e => {
+				e.preventDefault();
+				registerWithEmail();
+			}}>
 				<Input
 					onChange={(e) => setCredentials({...credentials , username : e})}
 					placeholder="user name"
