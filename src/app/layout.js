@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/custom.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: 'Welcome to Neotask',
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
  return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster/>
+      </body>
     </html>
   )
 }
