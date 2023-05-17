@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-export default function Input({icon , placeholder , required , type="text"}) {
+export default function Input({icon , placeholder , required , type="text" , onChange}) {
 	const [focus, setFocus] = useState(false);
 
 	return (
@@ -22,6 +22,7 @@ export default function Input({icon , placeholder , required , type="text"}) {
                     type={type}
 					placeholder={placeholder}
 					required={required}
+					onChange={e => onChange(e.target.value)}
 				/>
 			</div>
 		</>
