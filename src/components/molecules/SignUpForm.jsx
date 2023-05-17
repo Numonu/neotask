@@ -6,9 +6,8 @@ import { BsShieldLock, BsGoogle } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
-import { auth, googleAuth } from "@/libs/firebase.init";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import { useSignUp } from "../../hooks/useSignUp";
 
 export default function SignUpForm() {
 
@@ -18,34 +17,14 @@ export default function SignUpForm() {
 		password : ""
 	})
 
-
-	const registerWithEmail = async () => {
-		const loader = toast.loading("Sending");
-		try {
-			await createUserWithEmailAndPassword(auth , credentials.email , credentials.password);
-			toast.dismiss(loader);
-		} catch (error) {
-			console.error(error.code , error.message);
-			toast.error(error.message , {id: loader});
-		}
-	}
-
-	const registerWithGoogle = async () => {
-		const loader = toast.loading("Sending");
-		try {
-			await signInWithPopup(auth , googleAuth);
-			toast.dismiss(loader);
-		} catch (error) {
-			console.error(error.code , error.message);
-			toast.error(error.message , {id: loader});
-		}
-	}
+	const emailSignUp = useSignUp("email" , credentials);
+	const googleSignUp = useSignUp("google");
 
 	return (
 		<>
 			<form className="flex flex-col gap-4" onSubmit={e => {
 				e.preventDefault();
-				registerWithEmail();
+				emailSignUp();
 			}}>
 				<Input
 					onChange={(e) => setCredentials({...credentials , username : e})}
@@ -71,7 +50,7 @@ export default function SignUpForm() {
 					<MdOutlineMail className="text-3xl" />
 					<span>Continue with Email</span>
 				</Button>
-				<Button onClick={registerWithGoogle} type="button">
+				<Button onClick={googleSignUp} type="button">
 					<BsGoogle className="text-2xl" />
 					<span>Continue with Google</span>
 				</Button>
