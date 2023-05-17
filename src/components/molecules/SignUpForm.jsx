@@ -1,12 +1,12 @@
 "use client";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword , signInWithPopup } from "firebase/auth";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdAlternateEmail } from "react-icons/md";
 import { BsShieldLock, BsGoogle } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
-import { auth } from "@/libs/firebase.init";
+import { auth, googleAuth } from "@/libs/firebase.init";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -23,6 +23,17 @@ export default function SignUpForm() {
 		const loader = toast.loading("Sending");
 		try {
 			await createUserWithEmailAndPassword(auth , credentials.email , credentials.password);
+			toast.dismiss(loader);
+		} catch (error) {
+			console.error(error.code , error.message);
+			toast.error(error.message , {id: loader});
+		}
+	}
+
+	const registerWithGoogle = async () => {
+		const loader = toast.loading("Sending");
+		try {
+			await signInWithPopup(auth , googleAuth);
 			toast.dismiss(loader);
 		} catch (error) {
 			console.error(error.code , error.message);
@@ -60,7 +71,7 @@ export default function SignUpForm() {
 					<MdOutlineMail className="text-3xl" />
 					<span>Continue with Email</span>
 				</Button>
-				<Button>
+				<Button onClick={registerWithGoogle} type="button">
 					<BsGoogle className="text-2xl" />
 					<span>Continue with Google</span>
 				</Button>
