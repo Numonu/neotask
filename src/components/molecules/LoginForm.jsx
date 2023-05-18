@@ -8,29 +8,32 @@ import { useLogin } from "@/hooks/useLogin";
 import { useState } from "react";
 
 export default function LoginForm() {
-	const [credentials , setCredentials] = useState({
-		email : "",
-		password : ""
+	const [credentials, setCredentials] = useState({
+		email: "",
+		password: "",
 	});
 
-	const emailLogin = useLogin("email" , credentials);
+	const emailLogin = useLogin("email", credentials);
 	const googleLogin = useLogin("google");
 
 	return (
 		<>
-			<form className="flex flex-col gap-4" onSubmit={e => {
-				e.preventDefault();
-				emailLogin();
-			}}>
+			<form
+				className="flex flex-col gap-4"
+				onSubmit={(e) => {
+					e.preventDefault();
+					emailLogin();
+				}}
+			>
 				<Input
-					onChange={e => setCredentials({...credentials , email : e})}
+					onChange={(e) => setCredentials({ ...credentials, email: e })}
 					placeholder="email address"
 					icon={<MdAlternateEmail />}
 					type="email"
 					required
 				/>
 				<Input
-					onChange={e => setCredentials({...credentials , password : e})}
+					onChange={(e) => setCredentials({ ...credentials, password: e })}
 					placeholder="password"
 					icon={<BsShieldLock />}
 					type="password"
