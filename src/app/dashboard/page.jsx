@@ -1,14 +1,33 @@
+"use client";
 import Head from "next/head";
 import DashboardHead from "@/components/organisms/DashboardHead";
 import DashboardHero from "@/components/molecules/DashboardHero";
 import DashboardWorkspace from "@/components/organisms/DashboardWorkspace";
+import { dataReducer } from "@/utilities/dataReducer";
+import { useReducer } from "react";
 
 export const metadata = {
     title : "Manage your Notes",
     description : "Create , update adn delete notes"
 }
 
+const initalData = [
+	{
+		folderName : "all",
+		documents : [	
+			{
+				title : "Initial Document",
+				content : "this es a example content!"
+			}
+		],
+		config : {
+			protecteed : true,
+		}
+	}
+]
+
 export default function Dashboard() {
+	const [data , dispatch] = useReducer(dataReducer , initalData);
 	return (
 		<>
 			<Head>
