@@ -23,7 +23,7 @@ export function useSignUp(method , credentials) {
                     throw new Error("[Dev]: el metodo " + method + " no esta declarado");
 			}
 			toast.dismiss(loader);
-			router.push("/");
+			router.push("/dashboard");
 		} catch (error) {
 			console.error(error.code, error.message);
 			toast.error(error.message, { id: loader });
