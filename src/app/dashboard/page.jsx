@@ -31,9 +31,6 @@ export default function Dashboard() {
 	const [data , dispatch] = useReducer(dataReducer , initalData);
 	return (
 		<>
-			<Head>
-				<title>Manage your Notes</title>
-			</Head>
 			<div className="bg-neutral-50 text-neutral-800 h-[200vh]">
 				<dataContext.Provider>
 					<DashboardHead/>
