@@ -4,7 +4,7 @@ import DashboardHead from "@/components/organisms/DashboardHead";
 import DashboardHero from "@/components/molecules/DashboardHero";
 import DashboardWorkspace from "@/components/organisms/DashboardWorkspace";
 import { dataReducer } from "@/utilities/dataReducer";
-import { useReducer } from "react";
+import { createContext, useReducer } from "react";
 
 export const metadata = {
     title : "Manage your Notes",
@@ -26,6 +26,7 @@ const initalData = [
 	}
 ]
 
+export const dataContext = createContext(null);
 export default function Dashboard() {
 	const [data , dispatch] = useReducer(dataReducer , initalData);
 	return (
@@ -34,9 +35,11 @@ export default function Dashboard() {
 				<title>Manage your Notes</title>
 			</Head>
 			<div className="bg-neutral-50 text-neutral-800 h-[200vh]">
-				<DashboardHead/>
-                <DashboardHero/>
-				<DashboardWorkspace/>
+				<dataContext.Provider>
+					<DashboardHead/>
+                	<DashboardHero/>
+					<DashboardWorkspace/>
+				</dataContext.Provider>
 			</div>
 		</>
 	);
