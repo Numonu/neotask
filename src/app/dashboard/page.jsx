@@ -1,6 +1,4 @@
 "use client";
-import Head from "next/head";
-import DashboardHead from "@/components/organisms/DashboardHead";
 import DashboardHero from "@/components/molecules/DashboardHero";
 import DashboardWorkspace from "@/components/organisms/DashboardWorkspace";
 import { dataReducer } from "@/utilities/dataReducer";
@@ -31,9 +29,8 @@ export default function Dashboard() {
 	const [data , dispatch] = useReducer(dataReducer , initalData);
 	return (
 		<>
-			<div className="bg-neutral-50 text-neutral-800 h-[200vh]">
+			<div className="h-[200vh]">
 				<dataContext.Provider>
-					<DashboardHead/>
                 	<DashboardHero/>
 					<DashboardWorkspace/>
 				</dataContext.Provider>
