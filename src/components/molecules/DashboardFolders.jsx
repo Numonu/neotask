@@ -3,6 +3,7 @@ import { AiOutlineFolderOpen } from "react-icons/ai";
 import CreateFolder from "../atoms/CreateFolder";
 import Folder from "../atoms/Folder";
 import { dataContext } from "../organisms/DashboardWorkspace";
+import FolderTemplate from "./FolderTemplate";
 
 export default function DashboardFolders() {
 	const { data } = useContext(dataContext);
@@ -18,7 +19,8 @@ export default function DashboardFolders() {
 						{e.folderName}
 					</Folder>
 				))}
-				<CreateFolder/>
+				<FolderTemplate/>
+				<CreateFolder />
 			</div>
 		</>
 	);
