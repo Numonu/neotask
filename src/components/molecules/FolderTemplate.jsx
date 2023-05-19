@@ -1,10 +1,11 @@
 import { AiOutlineFolderOpen } from "react-icons/ai";
 
-export default function FolderTemplate() {
+export default function FolderTemplate({callback}) {
 
     const create = (e) => {
         if(e == "Enter" || !e){
             //here create a folder
+            callback();
         }
     }
 
