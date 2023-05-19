@@ -6,13 +6,13 @@ export default function FolderButton({ icon, children, order }) {
 	return (
 		<>
 			<button
-				className="bg-neutral-200 py-2 px-4 flex items-center gap-2 rounded-lg hover:bg-neutral-800 hover:text-neutral-50 hover:py-3 transition-[background-color_padding_color] focus:bg-neutral-800  focus:py-3 outline-outline group"
+				className="bg-neutral-200 hover:text-zinc-50 focus:text-zinc-50 hover:bg-neutral-800 focus:bg-neutral-800 outline-outline py-2 px-4 flex items-center gap-2 rounded-lg   hover:py-3 focus:py-3  transition-[background-color_padding_color]     "
 				onClick={() => setFolderFocus(order)}
 			>
-				<div className="text-2xl group-focus:text-amber-500">
+				<div className="text-2xl">
 					{icon}
 				</div>
-				<span className="text-xl capitalize group-focus:text-amber-500">
+				<span className="text-xl capitalize">
 					{children}
 				</span>
 			</button>
