@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CreateFolder from "./CreateFolder";
 
 export default function MyLink({ children , href = "#" }) {
 	return (
@@ -9,6 +10,7 @@ export default function MyLink({ children , href = "#" }) {
 			>
 				{children}
 			</Link>
+			<CreateFolder/>
 		</>
 	);
 }
