@@ -1,10 +1,11 @@
 import Title from "@/components/atoms/Title"
+import { unformatRoute } from "@/utilities/format"
 
 export default function TaskPage({params}){
-    const unformatedTitle = params.task_name.replace(/\-/g , " ")
+    const title = unformatRoute(params.task_name);
     return <>
-        <div className="wrapper min-h-screen px-4 py-16">
-            <Title>{unformatedTitle}</Title>
+        <div className="wrapper min-h-screen py-16">
+            <Title>{title}</Title>
         </div>
     </>
 }
