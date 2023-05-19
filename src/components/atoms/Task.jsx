@@ -1,10 +1,10 @@
+import { formatRoute } from "@/utilities/format";
 import { useRouter } from "next/navigation";
 
 export default function Task({title , date}) {
 	const router = useRouter();
-	const formatedTitle = title.replace(/\s/g , "-");
 
-	const navToTask = () => router.push(`/dashboard/${formatedTitle}`);
+	const navToTask = () => router.push(`/dashboard/${formatRoute(title)}`);
 
 	return (
 		<>
