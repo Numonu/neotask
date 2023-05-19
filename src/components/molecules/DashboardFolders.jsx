@@ -10,8 +10,12 @@ export default function DashboardFolders() {
 	return (
 		<>
 			<div className="flex flex-col gap-1">
-				{data.map((e) => (
-					<Folder key={e.folderName} icon={<AiOutlineFolderOpen />}>
+				{data.map((e, i) => (
+					<Folder
+						key={e.folderName}
+						order={i}
+						icon={<AiOutlineFolderOpen />}
+					>
 						{e.folderName}
 					</Folder>
 				))}
