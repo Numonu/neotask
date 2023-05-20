@@ -20,9 +20,13 @@ export default function DashboardWorkspace() {
 					setFolderFocus,
 				}}>
 					<Search />
-					<div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-[1fr_3fr]">
-						<DashboardFolders />
-						<DashboardTasks />
+					<div className="mt-4 flex flex-col gap-4 md:flex-row">
+						<div className="md:w-1/4">
+							<DashboardFolders />
+						</div>
+						<div className="md:w-3/4">
+							<DashboardTasks />
+						</div>
 					</div>
 				</dataContext.Provider>
 			</div>
