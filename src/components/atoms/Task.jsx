@@ -1,10 +1,9 @@
-import { formatRoute } from "@/utilities/format";
 import { useRouter } from "next/navigation";
 
-export default function Task({title , date}) {
+export default function Task({order , title , date}) {
 	const router = useRouter();
 
-	const navToTask = () => router.push(`/dashboard/${formatRoute(title)}`);
+	const navToTask = () => router.push(`/dashboard/${order}`);
 
 	return (
 		<>
