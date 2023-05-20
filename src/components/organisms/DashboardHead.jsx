@@ -10,7 +10,7 @@ export default function DashboardHead() {
 			<header
 				className={`${
 					scrollOver && "bg-white shadow-sm"
-				} sticky top-0 z-50 transition-[colors_shadow]`}
+				} sticky top-0 z-40 transition-[colors_shadow]`}
 			>
 				<nav className="max-w-[1200px] mx-auto py-2 px-4 flex justify-between items-center text-3xl">
 					<CircleButton>
