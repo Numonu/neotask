@@ -10,8 +10,8 @@ export default function DashboardTasks() {
 			<div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
 				<CreateDoc/>
 				{
-					data[folderFocus].documents.map(e => {
-						return <Task key={e.title} title={e.title} date={"20 marzo , 2023"}/>
+					data[folderFocus].documents.map((e,i) => {
+						return <Task order={i} key={e.title} title={e.title} date={e.date}/>
 					})
 				}
 			</div>
