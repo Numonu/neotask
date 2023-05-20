@@ -27,7 +27,7 @@ export default function FolderTemplate({ callback }) {
 				<div className="text-2xl">
 					<AiOutlineFolderOpen />
 				</div>
-				<inputg
+				<input
 					className="bg-neutral-700 text-xl capitalize grow"
 					type="text"
 					autoFocus="true"
