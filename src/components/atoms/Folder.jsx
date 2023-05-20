@@ -12,7 +12,7 @@ export default function FolderButton({ icon, children, order }) {
 				<div className="text-2xl">
 					{icon}
 				</div>
-				<span className="text-xl capitalize">
+				<span className="text-xl capitalize whitespace-nowrap text-ellipsis overflow-hidden">
 					{children}
 				</span>
 			</button>
