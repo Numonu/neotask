@@ -27,15 +27,13 @@ export default function FolderTemplate({ callback }) {
 				<div className="text-2xl">
 					<AiOutlineFolderOpen />
 				</div>
-				<span className="text-xl capitalize">
-					<input
-						type="text"
-						className="bg-neutral-700"
-						autoFocus="true"
-						onBlur={() => create("Enter")}
-						onChange={(e) => setFolderName(e.target.value)}
-					/>
-				</span>
+				<inputg
+					className="bg-neutral-700 text-xl capitalize grow"
+					type="text"
+					autoFocus="true"
+					onBlur={() => create("Enter")}
+					onChange={(e) => setFolderName(e.target.value)}
+				/>
 			</div>
 		</>
 	);
