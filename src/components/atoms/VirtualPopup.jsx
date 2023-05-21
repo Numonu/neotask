@@ -12,7 +12,7 @@ export default function VirtualPopup({ closeContent, openContent, openSize }) {
 		const _rect = container.current.getBoundingClientRect();
 		setRect(_rect);
 		console.log(_rect);
-	}, []);
+	}, [] );
 
 	return (
 		<>
