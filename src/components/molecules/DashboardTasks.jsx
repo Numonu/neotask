@@ -1,5 +1,6 @@
+"use client";
+import { dataContext } from "@/app/dashboard/providerLayout";
 import { useContext } from "react";
-import { dataContext } from "../organisms/DashboardWorkspace";
 import CreateDoc from "../atoms/CreateDoc";
 import Task from "../atoms/Task";
 

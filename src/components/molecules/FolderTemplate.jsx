@@ -1,6 +1,6 @@
+import { dataContext } from "@/app/dashboard/providerLayout";
 import { useContext, useState } from "react";
 import { AiOutlineFolderOpen } from "react-icons/ai";
-import { dataContext } from "../organisms/DashboardWorkspace";
 
 export default function FolderTemplate({ callback }) {
 	const [folderName, setFolderName] = useState("");
