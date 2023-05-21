@@ -1,7 +1,7 @@
+import { dataContext } from "@/app/dashboard/providerLayout";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
-import { dataContext } from "../organisms/DashboardWorkspace";
 
 export default function CreateDoc() {
 	const router = useRouter();

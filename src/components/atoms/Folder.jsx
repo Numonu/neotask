@@ -1,5 +1,5 @@
+import { dataContext } from "@/app/dashboard/providerLayout";
 import { useContext } from "react";
-import { dataContext } from "../organisms/DashboardWorkspace";
 
 export default function FolderButton({ icon, children, order }) {
 	const {setFolderFocus} = useContext(dataContext);
