@@ -1,9 +1,12 @@
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import { dataContext } from "../organisms/DashboardWorkspace";
 
 export default function CreateDoc() {
 	const router = useRouter();
-	const navToNew = () => router.push("dashboard/New-Document");
+	const {data , folderFocus} = useContext(dataContext);
+	const navToNew = () => router.push(`dashboard/${data[folderFocus].documents.length}`);
 
 	return (
 		<>
