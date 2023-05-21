@@ -46,6 +46,8 @@ export default function VirtualPopup({ closeContent, openContent, openSize }) {
                             transform : open && "translateX(-50%) translateY(-50%)",
 							width: !open ? rect.width : openSize.width,
 							height: !open ? rect.height : openSize.height,
+                            maxWidth : openSize.maxWidth,
+                            maxHeight  : openSize.maxHeight
 						}
 					}
 				>
