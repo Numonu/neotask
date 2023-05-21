@@ -1,3 +1,9 @@
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 .pattern-radial-points{
     background-image: radial-gradient(circle , transparent 50% , #fafafa 70%) , radial-gradient(circle , rgba(163, 163, 163, 0.3) 20% , #fafafa 20% );
     background-size: auto , 1rem 1rem;
@@ -6,10 +12,14 @@
     background-image: radial-gradient(circle , rgba(163, 163, 163, 0.3) 20% , transparent 20% );
     background-size: 1rem 1rem;
 }
-
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.animated-reveal{
+    animation: reveal .5s ease;
+}
+@keyframes reveal {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
