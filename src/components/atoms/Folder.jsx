@@ -1,8 +1,9 @@
+import { AiOutlineFolder  , AiOutlineFolderOpen} from "react-icons/ai";
 import { dataContext } from "@/app/dashboard/providerLayout";
 import { useContext } from "react";
 
-export default function FolderButton({ icon, children, order }) {
-	const {setFolderFocus} = useContext(dataContext);
+export default function FolderButton({children, order }) {
+	const {setFolderFocus , folderFocus} = useContext(dataContext);
 	return (
 		<>
 			<button
@@ -10,7 +11,7 @@ export default function FolderButton({ icon, children, order }) {
 				onClick={() => setFolderFocus(order)}
 			>
 				<div className="text-2xl">
-					{icon}
+					{order == folderFocus ? <AiOutlineFolderOpen/> : <AiOutlineFolder/>}
 				</div>
 				<span className="text-xl capitalize whitespace-nowrap text-ellipsis overflow-hidden">
 					{children}
