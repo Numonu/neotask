@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import TaskModal from "../molecules/TaskModal";
 import Modal from "./Modal";
 
-export default function Task({ title, date }) {
+export default function Task({ title, content , date }) {
 	const [showDetails, setShowDetails] = useState(false);
 
 	const hiddeDetails = () => setShowDetails(false);
@@ -24,6 +24,7 @@ export default function Task({ title, date }) {
 					<Modal callback={hiddeDetails}>
 						<TaskModal
 							title={title}
+							content={content}
 							hanldeClose={hiddeDetails}
 						/>
 					</Modal>,

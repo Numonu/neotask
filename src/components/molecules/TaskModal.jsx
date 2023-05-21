@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 import CircleButton from "../atoms/CircleButton";
 
-export default function TaskModal({ title , hanldeClose }) {
+export default function TaskModal({ title, hanldeClose, content = "" }) {
+	const [myContent, setMyContent] = useState(content);
 	return (
 		<>
 			<div className="bg-neutral-50 h-[90vh] w-[90%] max-w-[600px] p-4 rounded-md grid grid-rows-[min-content_1fr] gap-4">
@@ -11,7 +13,14 @@ export default function TaskModal({ title , hanldeClose }) {
 						<HiOutlineXMark className="text-2xl" />
 					</CircleButton>
 				</div>
-				<textarea className="bg-neutral-100 text-lg p-2 rounded-md" />
+				<textarea
+					placeholder="Content Here"
+					value={myContent}
+					className="bg-neutral-100 text-lg p-2 rounded-md"
+					onChange={(e) => {
+						setMyContent(e.target.value);
+					}}
+				/>
 			</div>
 		</>
 	);
