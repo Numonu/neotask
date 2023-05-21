@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
+				<div id="modal"></div>
 				<DefaultColors>{children}</DefaultColors>
 				<Toaster />
 			</body>
