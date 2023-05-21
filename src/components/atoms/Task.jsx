@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import TaskModal from "../molecules/TaskModal";
 import Modal from "./Modal";
 
-export default function Task({ title, content , date }) {
+export default function Task({ data , order }) {
 	const [showDetails, setShowDetails] = useState(false);
 
 	const hiddeDetails = () => setShowDetails(false);
@@ -16,15 +16,15 @@ export default function Task({ title, content , date }) {
 				onClick={() => setShowDetails(true)}
 			>
 				<div className="border-neutral-800 w-9 aspect-square border-4 rounded-xl mb-8 group-hover:rotate-45 transition-transform"></div>
-				<h2 className="font-bold text-3xl mb-2">{title}</h2>
-				<h3 className="font-medium">{date}</h3>
+				<h2 className="font-bold text-3xl mb-2">{data.title}</h2>
+				<h3 className="font-medium">{data.date}</h3>
 			</button>
 			{showDetails &&
 				createPortal(
 					<Modal callback={hiddeDetails}>
 						<TaskModal
-							title={title}
-							content={content}
+							data={data}
+							order={order}
 							hanldeClose={hiddeDetails}
 						/>
 					</Modal>,
