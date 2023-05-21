@@ -1,7 +1,6 @@
 "use client";
 import { dataContext } from "@/app/dashboard/providerLayout";
 import { useContext, useState } from "react";
-import { AiOutlineFolderOpen } from "react-icons/ai";
 import CreateFolder from "../atoms/CreateFolder";
 import Folder from "../atoms/Folder";
 import FolderTemplate from "./FolderTemplate";
@@ -20,7 +19,6 @@ export default function DashboardFolders() {
 					<Folder
 						key={e.folderName}
 						order={i}
-						icon={<AiOutlineFolderOpen />}
 					>
 						{e.folderName}
 					</Folder>
