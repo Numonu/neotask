@@ -14,6 +14,9 @@ export const dataReducer = produce((draft, action) => {
 				},
 			});
 			break;
+		case "rename-document":
+			draft[action.data.folderOrder].documents[action.data.docOrder].title = action.data.content;
+			break;
 		case "update-document":
 			draft[action.data.folderOrder].documents[action.data.docOrder].content = action.data.content;
 			break;
