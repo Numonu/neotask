@@ -1,4 +1,4 @@
-import { auth, googleAuth } from "@/libs/firebase.init";
+import { auth, googleAuth } from "@/firebase/config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
