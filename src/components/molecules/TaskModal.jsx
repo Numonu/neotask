@@ -4,11 +4,17 @@ import { HiOutlineXMark } from "react-icons/hi2";
 import CircleButton from "../atoms/CircleButton";
 
 export default function TaskModal({ data , order, hanldeClose}) {
-	const [content, setContent] = useState(data.content);
 	const {folderFocus , dispatch} = useContext(dataContext);
 
 	const updateContent = e => {
-		setContent(e.target.value);
+		dispatch({
+			type : "update-document",
+			data : {
+				folderOrder : folderFocus,
+				docOrder : order,
+				content : e
+			}
+		})
 	}
 
 	return (
@@ -22,9 +28,9 @@ export default function TaskModal({ data , order, hanldeClose}) {
 				</div>
 				<textarea
 					placeholder="Content Here"
-					value={content}
+					value={data.content}
 					className="bg-neutral-100 text-lg p-2 rounded-md"
-					onChange={(e) => updateContent(e)}
+					onChange={(e) => updateContent(e.target.value)}
 				/>
 			</div>
 		</>
