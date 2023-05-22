@@ -1,25 +1,30 @@
-import { useState } from "react";
+import { dataContext } from "@/app/dashboard/providerLayout";
+import { useContext, useState } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 import CircleButton from "../atoms/CircleButton";
 
-export default function TaskModal({ title, hanldeClose, content = "" }) {
-	const [myContent, setMyContent] = useState(content);
+export default function TaskModal({ data , order, hanldeClose}) {
+	const [content, setContent] = useState(data.content);
+	const {folderFocus , dispatch} = useContext(dataContext);
+
+	const updateContent = e => {
+		setContent(e.target.value);
+	}
+
 	return (
 		<>
 			<div className="bg-neutral-50 h-[90vh] w-[90%] max-w-[600px] p-4 rounded-md grid grid-rows-[min-content_1fr] gap-4">
 				<div className="flex justify-between items-center">
-					<h3 className="text-xl text-center font-medium">{title}</h3>
+					<h3 className="text-xl text-center font-medium">{data.title}</h3>
 					<CircleButton onClick={hanldeClose}>
 						<HiOutlineXMark className="text-2xl" />
 					</CircleButton>
 				</div>
 				<textarea
 					placeholder="Content Here"
-					value={myContent}
+					value={content}
 					className="bg-neutral-100 text-lg p-2 rounded-md"
-					onChange={(e) => {
-						setMyContent(e.target.value);
-					}}
+					onChange={(e) => updateContent(e)}
 				/>
 			</div>
 		</>
