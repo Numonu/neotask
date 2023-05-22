@@ -17,6 +17,13 @@ export const dataReducer = produce((draft, action) => {
 		case "update-document":
 			draft[action.data.folderOrder].documents[action.data.docOrder].content = action.data.content;
 			break;
+		case "create-document":
+			draft[action.data.folderOrder].documents.push({
+				title : "",
+				content : "",
+				date : ""
+			});
+			break;
 		default:
 			break;
 	}
