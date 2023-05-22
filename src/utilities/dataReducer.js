@@ -14,7 +14,9 @@ export const dataReducer = produce((draft, action) => {
 				},
 			});
 			break;
-
+		case "update-document":
+			draft[action.data.folderOrder].documents[action.data.docOrder].content = action.data.content;
+			break;
 		default:
 			break;
 	}
