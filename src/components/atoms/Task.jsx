@@ -16,7 +16,7 @@ export default function Task({ data , order }) {
 				onClick={() => setShowDetails(true)}
 			>
 				<div className="border-neutral-800 w-9 aspect-square border-4 rounded-xl mb-8 group-hover:rotate-45 transition-transform"></div>
-				<h2 className="font-bold text-3xl mb-2">{data.title}</h2>
+				<h2 className="font-bold text-3xl mb-2 overflow-hidden text-ellipsis whitespace-nowrap">{data.title}</h2>
 				<h3 className="font-medium">{data.date}</h3>
 			</button>
 			{showDetails &&
