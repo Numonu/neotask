@@ -5,7 +5,6 @@ import MyImage from "../atoms/MyImage";
 import Paragraph from "../atoms/Paragraph";
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
-import UserNavigate from "../atoms/UserNavigate";
 
 export default function HomeHero() {
 	return (
@@ -41,12 +40,10 @@ export default function HomeHero() {
 						organizing your notes.Shall we get started?
 					</Paragraph>
 					<div className="relative">
-						<UserNavigate href="/dashboard">
-							<Button className="mt-4" type="button">
-								<BsFillRocketTakeoffFill />
-								let&apos;s go
-							</Button>
-						</UserNavigate>
+						<Button className="mt-4" type="button">
+							<BsFillRocketTakeoffFill />
+							let&apos;s go
+						</Button>
 						<MyImage
 							className="absolute right-0 translate-y-1 w-16 h-9"
 							src="svg/circleArrow.svg"
