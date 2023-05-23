@@ -24,7 +24,7 @@ export const dataReducer = produce((draft, action) => {
 			draft[action.data.folderOrder].documents.push({
 				title : "",
 				content : "",
-				date : ""
+				date : action.data.date
 			});
 			break;
 		default:
