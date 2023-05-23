@@ -1,9 +1,13 @@
 import { dataContext } from "@/app/dashboard/providerLayout";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { createPortal } from "react-dom";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import TaskModal from "../molecules/TaskModal";
+import Modal from "./Modal";
 
 export default function CreateDoc() {
-	const {folderFocus , dispatch} = useContext(dataContext);
+	const [openTask , setOpenTask] = useState(false);
+	const {folderFocus , dispatch , data} = useContext(dataContext);
 	
 	const create = () => {
 		dispatch({
@@ -12,6 +16,7 @@ export default function CreateDoc() {
 				folderOrder : folderFocus
 			}
 		})
+		setOpenTask(true);
 	}
 
 	return (
@@ -20,6 +25,17 @@ export default function CreateDoc() {
 				<IoDocumentTextOutline className="text-3xl"/>
 				<h3 className="text-xl">Create New Document</h3>
 			</button>
+			{openTask &&
+				createPortal(
+					<Modal callback={() => setOpenTask(false)}>
+						<TaskModal
+							data={data[folderFocus]}
+							order={data[folderFocus].documents.length - 1}
+							hanldeClose={() => setOpenTask(false)}
+						/>
+					</Modal>,
+					document.getElementById("modal")
+				)}
 		</>
 	);
 }
