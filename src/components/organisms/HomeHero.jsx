@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import Button from "../atoms/Button";
 import Logo from "../atoms/Logo";
@@ -9,7 +10,7 @@ import Title from "../atoms/Title";
 export default function HomeHero() {
 	return (
 		<>
-			<div className="h-screen grid grid-rows-[1fr_min-content]   place-items-center text-center">
+			<div className="h-screen grid grid-rows-[1fr_min-content] place-items-center text-center">
 				<MyImage
 					className="absolute left-0 top-0 h-8 w-20"
 					src="/svg/twoLines.svg"
@@ -40,10 +41,12 @@ export default function HomeHero() {
 						organizing your notes.Shall we get started?
 					</Paragraph>
 					<div className="relative">
-						<Button className="mt-4" type="button">
-							<BsFillRocketTakeoffFill />
-							let&apos;s go
-						</Button>
+						<Link href={"/dashboard"}>
+							<Button className="mt-4" type="button">
+								<BsFillRocketTakeoffFill />
+								let&apos;s go
+							</Button>
+						</Link>
 						<MyImage
 							className="absolute right-0 translate-y-1 w-16 h-9"
 							src="svg/circleArrow.svg"
