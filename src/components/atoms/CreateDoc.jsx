@@ -1,4 +1,5 @@
 import { dataContext } from "@/app/dashboard/providerLayout";
+import { getDate } from "@/utilities/getDate";
 import { useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { IoDocumentTextOutline } from "react-icons/io5";
@@ -13,7 +14,8 @@ export default function CreateDoc() {
 		dispatch({
 			type : "create-document",
 			data : {
-				folderOrder : folderFocus
+				folderOrder : folderFocus,
+				date : getDate()
 			}
 		})
 		setOpenTask(true);
