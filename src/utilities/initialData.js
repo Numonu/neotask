@@ -1,16 +1,13 @@
+import { getDate } from "./getDate";
+
 export const initialData = [
 	{
-		folderName: "all",
+		folderName: "example folder",
 		documents: [
 			{
-				title: "Initial Document",
-				content: "this es a example content!",
-				date : "20 of March 2023"
-			},
-			{
-				title: "Secondary Document",
-				content: "this secondary example content",
-				date : "20 of March 2023"
+				title: "example document",
+				content: "example content",
+				date : getDate()
 			},
 		],
 		config: {
