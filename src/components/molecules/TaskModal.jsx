@@ -6,13 +6,13 @@ import CircleButton from "../atoms/CircleButton";
 export default function TaskModal({ data, order, hanldeClose }) {
 	const { folderFocus, dispatch } = useContext(dataContext);
 
-	const updateContent = (type , e) => {
+	const updateContent = (type, content) => {
 		dispatch({
 			type: type,
 			data: {
 				folderOrder: folderFocus,
 				docOrder: order,
-				content: e,
+				content,
 			},
 		});
 	};
@@ -24,20 +24,20 @@ export default function TaskModal({ data, order, hanldeClose }) {
 					<input
 						type="text"
 						value={data.title}
-						className="bg-neutral-100 focus:outline-outline p-2 rounded-md grow text-xl font-medium outline-offset-8 focus:outline-8"
+						className="bg-neutral-100 p-2 rounded-md grow text-xl font-medium"
 						placeholder="Title content"
-						onChange={(e) => updateContent("rename-document" , e.target.value)}
+						onChange={(e) => updateContent("rename-document", e.target.value)}
 					/>
 					<CircleButton onClick={hanldeClose}>
 						<HiOutlineXMark className="text-2xl" />
 					</CircleButton>
 				</div>
-				<textarea
-					placeholder="Content Here"
-					value={data.content}
-					className="bg-neutral-100 focus:outline-outline text-lg p-2 rounded-md outline-offset-8 focus:outline-8"
-					onChange={(e) => updateContent("update-document" , e.target.value)}
-				/>
+					<textarea
+						placeholder="Content Here"
+						value={data.content}
+						className="bg-neutral-100 text-lg p-2 rounded-md resize-none"
+						onChange={(e) =>updateContent("update-document", e.target.value)}
+					/>
 			</div>
 		</>
 	);
