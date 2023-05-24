@@ -28,6 +28,7 @@ export function useSignUp(method, credentials) {
 						"[Dev]: el metodo " + method + " no esta declarado"
 					);
 			}
+			localStorage["neotask-local-data"] = "";
 			//finalmente redirigimos a la ruta dashboard
 			toast.dismiss(loader);
 			router.push("/dashboard");
