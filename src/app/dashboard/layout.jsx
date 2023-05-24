@@ -6,11 +6,9 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<DashboardHead />
-			<ProviderLayout>
-				<AuthLayout>
-					{children}
-				</AuthLayout>
-			</ProviderLayout>
+			<AuthLayout>
+				<ProviderLayout>{children}</ProviderLayout>
+			</AuthLayout>
 		</>
 	);
 }
