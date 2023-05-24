@@ -41,7 +41,6 @@ export function useSignUp(method, credentials) {
 }
 
 const loopTryCreateUser = async (uid , username) => {
-	alert(username);
 	let intentos = 1;
 	while (intentos < 5) {
 		intentos++;
