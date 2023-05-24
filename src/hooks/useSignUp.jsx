@@ -50,8 +50,9 @@ const loopTryCreateUser = async (uid , username) => {
 				data : "",
 			});
 			break;
-		} catch (e) {
+		} catch (error) {
 			await new Promise((res) => setTimeout(res , 5000))
+			console.error(error);
 			continue;
 		}
 	}
